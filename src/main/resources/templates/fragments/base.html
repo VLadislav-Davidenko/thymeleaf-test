@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      th:with="pathPrefix=${pathPrefix}">
+<head>
+    <link rel="shortcut icon" href="https://logbook.itstep.org/favicon.ico?v=2">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        header, footer {
+            background-color: aquamarine;
+            height: 50px;
+            width: 100%;
+        }
+
+        .main_menu_block {
+            height: calc(100% - 100px);
+            display: flex;
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <span> MY APP</span>
+    </div>
+</header>
+<div class="main_menu_block">
+    <nav style="width: 200px; background-color: #a1bdee" th:insert="fragments/menu :: menu">
+
+    </nav>
+    <main style="width: 100%;;">
+        <div layout:fragment="content"></div>
+    </main>
+</div>
+<footer>
+    <span>&copy 2022</span>
+</footer>
+
+</body>
+</html>

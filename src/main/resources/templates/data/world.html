@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:tymeleaf="http://www.thymeleaf.org/" xmlns:layout="http://www.bluhbluh.com/"
+      layout:decorate="~{fragments/base}">
+<head>
+    <title>hello page</title>
+</head>
+<body layout:fragment="content">
+<h1>Hello word</h1>
+<h1 tymeleaf:text="${testMsg}">Hello</h1>
+
+<div style="background-color: beige" tymeleaf:object="${post}">
+    <h3 tymeleaf:text="*{title}" style="font-style: italic"></h3>
+    <p tymeleaf:text="*{getText()}"></p>
+</div>
+
+</body>
+</html>
